@@ -1,0 +1,8 @@
+arm-none-eabi-as -o -g ts.o ts.s
+arm-none-eabi-gcc -c -g -mcpu=arm926ej-s t.c -o t.o
+arm-none-eabi-ld -g -T t.ld ts.o t.o -o t.elf
+arm-none-eabi-nm t.elf
+
+arm-none-eabi-objcopy -O binary t.elf t.bin
+
+qemu-system-arm -M versatilepb -kernel t.bin -nographic -serial /dev/null
