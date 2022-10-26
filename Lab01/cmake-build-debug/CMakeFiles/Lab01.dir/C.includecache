@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Deirdre/College/CIT/Year 4/Semester 1/Embedded Systems Engineering/Lab01/main.c
+ctype.h
+-
+stdio.h
+-
+stdio.h
+-
+malloc.h
+-
+mem.h
+-
+
+C:/Users/Deirdre/College/CIT/Year 4/Semester 1/Embedded Systems Engineering/Lab01/traffic-model.c
+unistd.h
+-
+stdio.h
+-
+sys/select.h
+-
+
+C:/Users/Deirdre/College/CIT/Year 4/Semester 1/Embedded Systems Engineering/Lab01/tree.c
+stdio.h
+-
+malloc.h
+-
+mem.h
+-
+

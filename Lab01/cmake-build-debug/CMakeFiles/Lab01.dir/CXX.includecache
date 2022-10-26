@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Deirdre/College/CIT/Year 4/Semester 1/Embedded Systems Engineering/Lab01/main.cpp
+unistd.h
+-
+stdio.h
+-
+sys/select.h
+-
+
