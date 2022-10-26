@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Deirdre/College/CIT/Year 4/Semester 1/Embedded Systems Engineering/Lab02/lab2-files/peak/Stream.h
+
+C:/Users/Deirdre/College/CIT/Year 4/Semester 1/Embedded Systems Engineering/Lab02/lab2-files/peak/peak.c
+stdio.h
+-
+Stream.h
+C:/Users/Deirdre/College/CIT/Year 4/Semester 1/Embedded Systems Engineering/Lab02/lab2-files/peak/Stream.h
+
+C:/Users/Deirdre/College/CIT/Year 4/Semester 1/Embedded Systems Engineering/Lab02/lab2-files/peak/testbench.c
+peak.c
+C:/Users/Deirdre/College/CIT/Year 4/Semester 1/Embedded Systems Engineering/Lab02/lab2-files/peak/peak.c
+stdio.h
+-
+

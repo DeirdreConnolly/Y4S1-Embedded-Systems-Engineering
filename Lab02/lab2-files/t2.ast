@@ -1,0 +1,60 @@
+TranslationUnitDecl 0x1c07df0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x1c082e8 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x1c08040 '__int128'
+|-TypedefDecl 0x1c08348 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x1c08060 'unsigned __int128'
+|-TypedefDecl 0x1c083d8 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x1c083a0 'char *'
+|   `-BuiltinType 0x1c07e80 'char'
+|-TypedefDecl 0x1c08688 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x1c08630 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x1c084b0 'struct __va_list_tag'
+|     `-Record 0x1c08428 '__va_list_tag'
+`-FunctionDecl 0x1c08728 </home/paul/compiler/clang-ast/first/t2.c:1:1, line:11:1> line:1:1 fred 'int ()'
+  `-CompoundStmt 0x1c541b0 <col:7, line:11:1>
+    |-DeclStmt 0x1c08928 <line:2:1, col:10>
+    | |-VarDecl 0x1c08820 <col:1, col:5> col:5 used i 'int'
+    | `-VarDecl 0x1c08890 <col:1, col:9> col:7 used j 'int' cinit
+    |   `-IntegerLiteral 0x1c088f0 <col:9> 'int' 0
+    |-BinaryOperator 0x1c08988 <line:3:1, col:3> 'int' '='
+    | |-DeclRefExpr 0x1c08940 <col:1> 'int' lvalue Var 0x1c08820 'i' 'int'
+    | `-IntegerLiteral 0x1c08968 <col:3> 'int' 0
+    |-BinaryOperator 0x1c089f8 <line:4:1, col:3> 'int' '='
+    | |-DeclRefExpr 0x1c089b0 <col:1> 'int' lvalue Var 0x1c08890 'j' 'int'
+    | `-IntegerLiteral 0x1c089d8 <col:3> 'int' 0
+    |-WhileStmt 0x1c54138 <line:5:1, line:9:1>                                              // Begin while statement
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x1c08a80 <line:5:8, col:10> 'int' '<'                               // Backbones of compiler
+    | | |-ImplicitCastExpr 0x1c08a68 <col:8> 'int' <LValueToRValue>                         // Casting expression as int
+    | | | `-DeclRefExpr 0x1c08a20 <col:8> 'int' lvalue Var 0x1c08820 'i' 'int'              // Reference to declared variable int i
+    | | `-IntegerLiteral 0x1c08a48 <col:10> 'int' 10                                        // Declare a literal integer 10
+    | `-CompoundStmt 0x1c54110 <col:13, line:9:1>                                           // Where while loop closes
+    |   |-IfStmt 0x1c54008 <line:6:4, line:7:13>                                            // Begin if statement
+    |   | |-<<<NULL>>>
+    |   | |-BinaryOperator 0x1c53ea0 <line:6:8, col:10> 'int' '&'                           // Perform bitwise AND operator
+    |   | | |-ImplicitCastExpr 0x1c08af0 <col:8> 'int' <LValueToRValue>                     // Casting expression as int
+    |   | | | `-DeclRefExpr 0x1c08aa8 <col:8> 'int' lvalue Var 0x1c08820 'i' 'int'          // Reference to declared variable int i
+    |   | | `-IntegerLiteral 0x1c08ad0 <col:10> 'int' 1                                     // Declare a literal integer 1
+    |   | |-BinaryOperator 0x1c53fe0 <line:7:7, col:13> 'int' '='                           // Perform binary operation
+    |   | | |-DeclRefExpr 0x1c53ec8 <col:7> 'int' lvalue Var 0x1c08890 'j' 'int'            // Reference to declared variable int j
+    |   | | `-BinaryOperator 0x1c53fb8 <col:9, col:13> 'int' '+'                            // Perform binary operator, adding the operands i+10
+    |   | |   |-BinaryOperator 0x1c53f70 <col:9, col:11> 'int' '+'                          // Perform binary operator, adding the operands j+i
+    |   | |   | |-ImplicitCastExpr 0x1c53f40 <col:9> 'int' <LValueToRValue>                 // Implicit type conversion of int
+    |   | |   | | `-DeclRefExpr 0x1c53ef0 <col:9> 'int' lvalue Var 0x1c08890 'j' 'int'      // Reference to declared variable int j
+    |   | |   | `-ImplicitCastExpr 0x1c53f58 <col:11> 'int' <LValueToRValue>                // Implicit type conversion of int
+    |   | |   |   `-DeclRefExpr 0x1c53f18 <col:11> 'int' lvalue Var 0x1c08820 'i' 'int'     // Reference to declared variable int i
+    |   | |   `-IntegerLiteral 0x1c53f98 <col:13> 'int' 10                                  // Declare a literal integer 10
+    |   | `-<<<NULL>>>
+    |   `-BinaryOperator 0x1c540e8 <line:8:4, col:8> 'int' '='                              // Perform binary operation
+    |     |-DeclRefExpr 0x1c54038 <col:4> 'int' lvalue Var 0x1c08820 'i' 'int'              // Reference to declared variable int i
+    |     `-BinaryOperator 0x1c540c0 <col:6, col:8> 'int' '+'                               // Perform binary operator, adding the operands i+j
+    |       |-ImplicitCastExpr 0x1c540a8 <col:6> 'int' <LValueToRValue>                     // Implicit type conversion of int
+    |       | `-DeclRefExpr 0x1c54060 <col:6> 'int' lvalue Var 0x1c08820 'i' 'int'          // Reference to declared variable int i
+    |       `-IntegerLiteral 0x1c54088 <col:8> 'int' 1                                      // Declare a literal integer 1
+    `-ReturnStmt 0x1c54198 <line:10:1, col:8>
+      `-ImplicitCastExpr 0x1c54180 <col:8> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x1c54158 <col:8> 'int' lvalue Var 0x1c08890 'j' 'int'
+
+
+// Lines 25-53 shows a dump of the WhileStmt node and its children, which corresponds to the while loop in t2.c
+// t2.ast was generated using: clang-check -ast-dump t2.c --extra-arg="-fno-color-diagnostics" > t2.ast
